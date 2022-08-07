@@ -1,35 +1,34 @@
-
-enum Trabalho {
-    Atriz,
-    Padeiro
+interface Iprofissao  {
+  profissao: 'Atriz' | 'Padeiro'
 }
 
-type Humano = {
-    nome: string,
-    idade: number,
-    profissao: Trabalho
+interface employeeInfo extends Iprofissao {
+  nome: string
+  idade: number
 }
 
-let pessoa1: Humano = {
-    nome: 'maria',
-    idade: 29,
-    profissao: Trabalho.Atriz
-};
-
-let pessoa2: Humano = {
-    nome: 'roberto',
-    idade: 19,
-    profissao: Trabalho.Padeiro
-};
-
-let pessoa3: Humano = {
-    nome: 'laura',
-    idade: 32,
-    profissao: Trabalho.Atriz
-};
-
-let pessoa4: Humano = {
-    nome: "carlos",
-    idade: 19,
-    profissao: Trabalho.Padeiro
+let pessoa1: employeeInfo = {
+  nome: "Maria",
+  idade: 29,
+  profissao: "Atriz"
 }
+
+let pessoa2: employeeInfo = {
+  nome: "Roberto",
+  idade: 19,
+  profissao: "Padeiro"
+}
+
+let pessoa3: employeeInfo = {
+  nome: "Laura",
+  idade: 32,
+  profissao: "Atriz"
+}
+
+let pessoa4: employeeInfo = {
+  nome: "Carlos",
+  idade: 19,
+  profissao: "Padeiro"
+}
+
+console.log(pessoa3.profissao)
